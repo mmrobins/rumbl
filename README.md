@@ -1,19 +1,11 @@
 # Rumbl
 
-To start your Phoenix app:
+Going through the Programming Phoenix book.
 
-  1. Install dependencies with `mix deps.get`
-  2. Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  3. Start Phoenix endpoint with `mix phoenix.server`
+Also doing it with Docker, cause might as well do all the new and cool things at once.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+`docker-compose web` to start running the app
 
-Ready to run in production? Please [check our deployment guides](http://www.phoenixframework.org/docs/deployment).
-
-## Learn more
-
-  * Official website: http://www.phoenixframework.org/
-  * Guides: http://phoenixframework.org/docs/overview
-  * Docs: http://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+`open http://$(docker-machine ip default):4000` to see the app in your web
+browser, that is if you're developing on a mac, which is obviously the perfect
+place for docker since it has such great container support
