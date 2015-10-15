@@ -4,7 +4,10 @@ Going through the Programming Phoenix book.
 
 Also doing it with Docker, cause might as well do all the new and cool things at once.
 
-`docker-compose web` to start running the app
+   docker-compose build
+   docker-compose web
+   docker-compose run --rm web sh -c "mix ecto.create"
+   docker-compose run --rm web sh -c "mix ecto.migrate"
 
 `open http://$(docker-machine ip default):4000` to see the app in your web
 browser, that is if you're developing on a mac, which is obviously the perfect

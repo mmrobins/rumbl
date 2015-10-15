@@ -1,11 +1,14 @@
 db:
   image: postgres
+  environment:
+    POSTGRES_USER: rumbl_user
+    POSTGRES_PASSWORD: rumbl_pass
 web:
   build: .
   command: mix phoenix.server
   volumes:
     - .:/myapp
   ports:
-    - "4000:4000"
+    - "4001:4000"
   links:
     - db
