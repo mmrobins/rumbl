@@ -40,6 +40,7 @@ defmodule Rumbl.Auth do
   alias Rumbl.Router.Helpers
 
   def authenticate_user(conn, _opts) do
+    require IEx
     if conn.assigns.current_user do
       conn
     else
