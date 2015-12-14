@@ -12,6 +12,8 @@ defmodule Rumbl.VideoControllerTest do
     other_video = insert_video(insert_user(username: "other"), title: "another video")
     conn = get conn, video_path(conn, :index)
     assert html_response(conn, 200) =~ ~r/Listing videos/
+    assert String.contains?(conn.resp_body, user_video.title)
+    refute String.contains?(conn.resp_body, other_video.title)
   end
 
   test "requires user authentication on all actions" do
